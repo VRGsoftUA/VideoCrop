@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">videcrop</string>
+    <string name="default_time">00:00</string>
+    <string name="custom">Custom</string>
+    <string name="square">Square</string>
+    <string name="portrait">Portrait</string>
+    <string name="landscape">Landscape</string>
+    <string name="_4_3">4:3</string>
+    <string name="_16_9">16:9</string>
+</resources>

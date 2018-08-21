@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="130dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_stroke"
+    android:translationY="400dp">
+
+    <TextView
+        android:id="@+id/tvAspectCustom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:paddingStart="48dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/custom"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ivCustom"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvAspectCustom"
+        app:layout_constraintStart_toStartOf="@id/tvAspectCustom"
+        app:layout_constraintTop_toTopOf="@id/tvAspectCustom"
+        app:srcCompat="@drawable/ic_crop_custom" />
+
+    <TextView
+        android:id="@+id/tvAspectSquare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:paddingStart="48dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/square"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAspectCustom" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ivSquare"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvAspectSquare"
+        app:layout_constraintStart_toStartOf="@id/tvAspectSquare"
+        app:layout_constraintTop_toTopOf="@id/tvAspectSquare"
+        app:srcCompat="@drawable/ic_crop_square" />
+
+    <TextView
+        android:id="@+id/tvAspectPortrait"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:paddingStart="48dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/portrait"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAspectSquare" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ivAspectPortrait"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvAspectPortrait"
+        app:layout_constraintStart_toStartOf="@id/tvAspectPortrait"
+        app:layout_constraintTop_toTopOf="@id/tvAspectPortrait"
+        app:srcCompat="@drawable/ic_crop_portrait" />
+
+    <TextView
+        android:id="@+id/tvAspectLandscape"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:paddingStart="48dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/landscape"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAspectPortrait" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ivAspectLandscape"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvAspectLandscape"
+        app:layout_constraintStart_toStartOf="@id/tvAspectLandscape"
+        app:layout_constraintTop_toTopOf="@id/tvAspectLandscape"
+        app:srcCompat="@drawable/ic_crop_landscape" />
+
+    <TextView
+        android:id="@+id/tvAspect4by3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:paddingStart="48dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/_4_3"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAspectLandscape" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv4by3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvAspect4by3"
+        app:layout_constraintStart_toStartOf="@id/tvAspect4by3"
+        app:layout_constraintTop_toTopOf="@id/tvAspect4by3"
+        app:srcCompat="@drawable/ic_crop_4_3" />
+
+    <TextView
+        android:id="@+id/tvAspect16by9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:paddingStart="48dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/_16_9"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAspect4by3" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv16by9"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvAspect16by9"
+        app:layout_constraintStart_toStartOf="@id/tvAspect16by9"
+        app:layout_constraintTop_toTopOf="@id/tvAspect16by9"
+        app:srcCompat="@drawable/ic_crop_16_9" />
+</android.support.constraint.ConstraintLayout>

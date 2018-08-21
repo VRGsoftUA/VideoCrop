@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <net.vrgsoft.videcrop.cropview.window.CropVideoView
+        android:id="@+id/cropVideoView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/clBottomMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <net.vrgsoft.videcrop.view.ProgressView
+        android:id="@+id/pbCropProgress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cropVideoView"
+        app:layout_constraintEnd_toEndOf="@id/cropVideoView"
+        app:layout_constraintStart_toStartOf="@id/cropVideoView"
+        app:layout_constraintTop_toTopOf="@id/cropVideoView" />
+
+    <TextView
+        android:id="@+id/tvCropProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cropVideoView"
+        app:layout_constraintEnd_toEndOf="@id/cropVideoView"
+        app:layout_constraintStart_toStartOf="@id/cropVideoView"
+        app:layout_constraintTop_toTopOf="@id/cropVideoView"
+        tools:text="75%" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clBottomMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_stroke"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_time"
+            app:layout_constraintBottom_toBottomOf="@id/tmbProgress"
+            app:layout_constraintEnd_toStartOf="@id/tmbProgress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tmbProgress" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_time"
+            app:layout_constraintBottom_toBottomOf="@id/tmbProgress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tmbProgress"
+            app:layout_constraintTop_toTopOf="@id/tmbProgress" />
+
+        <net.vrgsoft.videcrop.view.VideoSliceSeekBarH
+            android:id="@+id/tmbProgress"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginRight="72dp"
+            android:layout_marginBottom="8dp"
+            app:ad_marker_color="#000000"
+            app:bar_height="2dp"
+            app:buffered_color="#5547567c"
+            app:layout_constraintBottom_toTopOf="@id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:played_color="#000000"
+            app:scrubber_disabled_size="16dp"
+            app:scrubber_dragged_size="20dp"
+            app:scrubber_enabled_size="18dp"
+            app:unplayed_color="#f2f2f2" />
+
+        <!--<com.google.android.exoplayer2.ui.DefaultTimeBar-->
+        <!--android:id="@+id/tmbProgress"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_marginStart="72dp"-->
+        <!--android:layout_marginLeft="72dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginEnd="72dp"-->
+        <!--android:layout_marginRight="72dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--app:ad_marker_color="#000000"-->
+        <!--app:bar_height="2dp"-->
+        <!--app:buffered_color="#5547567c"-->
+        <!--app:layout_constraintBottom_toTopOf="@id/divider"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:played_color="#000000"-->
+        <!--app:scrubber_disabled_size="16dp"-->
+        <!--app:scrubber_dragged_size="20dp"-->
+        <!--app:scrubber_enabled_size="18dp"-->
+        <!--app:unplayed_color="#f2f2f2" />-->
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lighter_gray"
+            app:layout_constraintBottom_toTopOf="@id/ivAspectRatio"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/ivAspectRatio"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="?selectableItemBackground"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivPlay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_crop" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?selectableItemBackground"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivDone"
+            app:layout_constraintStart_toEndOf="@id/ivAspectRatio"
+            app:layout_constraintTop_toTopOf="@id/ivAspectRatio"
+            app:srcCompat="@drawable/ic_play" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/ivDone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?selectableItemBackground"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivPlay"
+            app:layout_constraintTop_toTopOf="@id/ivAspectRatio"
+            app:srcCompat="@drawable/ic_check" />
+    </android.support.constraint.ConstraintLayout>
+
+    <include
+        android:id="@+id/aspectMenu"
+        layout="@layout/view_aspect_ratio_menu"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
