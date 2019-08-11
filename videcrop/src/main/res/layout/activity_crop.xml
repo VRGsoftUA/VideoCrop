@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="@id/cropVideoView"
         tools:text="75%" />
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clBottomMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
             app:layout_constraintBottom_toTopOf="@id/ivAspectRatio"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivAspectRatio"
             android:layout_width="0dp"
             android:layout_height="60dp"
@@ -133,7 +133,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/ic_crop" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivPlay"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -145,7 +145,7 @@
             app:layout_constraintTop_toTopOf="@id/ivAspectRatio"
             app:srcCompat="@drawable/ic_play" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivDone"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -156,7 +156,7 @@
             app:layout_constraintStart_toEndOf="@id/ivPlay"
             app:layout_constraintTop_toTopOf="@id/ivAspectRatio"
             app:srcCompat="@drawable/ic_check" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <include
         android:id="@+id/aspectMenu"
@@ -166,4 +166,4 @@
         android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

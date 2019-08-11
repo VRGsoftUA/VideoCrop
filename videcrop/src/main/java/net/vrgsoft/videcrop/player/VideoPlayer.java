@@ -41,13 +41,12 @@ public class VideoPlayer implements Player.EventListener, TimeBar.OnScrubListene
     private Runnable progressUpdater;
 
     public VideoPlayer(Context context) {
-        BandwidthMeter bandwidthMeter = new DefaultBandwidthMeter();
-        TrackSelection.Factory videoTrackSelectionFactory =
-                new AdaptiveTrackSelection.Factory(bandwidthMeter);
+        TrackSelection.Factory videoTrackSelectionFactory = new AdaptiveTrackSelection.Factory();
         TrackSelector trackSelector =
                 new DefaultTrackSelector(videoTrackSelectionFactory);
         LoadControl loadControl = new DefaultLoadControl();
-        player = ExoPlayerFactory.newSimpleInstance(new DefaultRenderersFactory(context), trackSelector, loadControl);
+        DefaultRenderersFactory renderersFactory = new DefaultRenderersFactory(context, DefaultRenderersFactory.EXTENSION_RENDERER_MODE_OFF);
+        player = ExoPlayerFactory.newSimpleInstance(context, renderersFactory, trackSelector, loadControl);
         player.setRepeatMode(Player.REPEAT_MODE_ONE);
         player.addListener(this);
         progressHandler = new Handler();
@@ -55,9 +54,7 @@ public class VideoPlayer implements Player.EventListener, TimeBar.OnScrubListene
 
     public void initMediaSource(Context context, String uri) {
         DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(context, Util.getUserAgent(context, "ExoPlayer"));
-        ExtractorsFactory extractorsFactory = new DefaultExtractorsFactory();
-        MediaSource videoSource = new ExtractorMediaSource(Uri.parse(uri),
-                dataSourceFactory, extractorsFactory, null, null);
+        MediaSource videoSource = new ExtractorMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(uri));
 
         player.prepare(videoSource);
         player.addVideoListener(this);
